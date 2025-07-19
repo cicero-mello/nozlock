@@ -3,8 +3,8 @@ import { ParentComponent } from "solid-js"
 export const Vault: ParentComponent = () => {
 
     return (
-        <main>
+        <div>
             Vault
-        </main>
+        </div>
     )
 }

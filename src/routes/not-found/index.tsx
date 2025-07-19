@@ -3,8 +3,8 @@ import { ParentComponent } from "solid-js"
 export const NotFound: ParentComponent = () => {
 
     return (
-        <main>
+        <div>
             NotFound
-        </main>
+        </div>
     )
 }
