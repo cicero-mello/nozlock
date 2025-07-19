@@ -29,6 +29,9 @@
             "@components/*": [
                 "src/components/*"
             ],
+            "@components": [
+                "src/components/index.ts"
+            ],
             "@styles": [
                 "src/styles.ts"
             ]

@@ -1,6 +1,8 @@
-export * from "./create-vault"
-
 export * from "./home"
+export * from "./create-vault"
+export * from "./import-vault"
+export * from "./about"
+export * from "./donate"
 
 export * from "./settings"
 export * from "./settings/layout"

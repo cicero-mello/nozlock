@@ -1,5 +1,5 @@
 import { defineConfig } from "vite"
-import { macaronVitePlugin } from "@macaron-css/vite"
+import tsconfigPaths from "vite-tsconfig-paths"
 import solid from "vite-plugin-solid"
 import path from "path"
 
@@ -8,14 +8,13 @@ const host = process.env.TAURI_DEV_HOST
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
     plugins: [
-        macaronVitePlugin(),
         solid(),
+        tsconfigPaths()
     ],
     alias: {
         "@components": path.resolve(__dirname, "src/components"),
         "@styles": path.resolve(__dirname, "src/styles.ts"),
     },
-
     // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
     //
     // 1. prevent vite from obscuring rust errors

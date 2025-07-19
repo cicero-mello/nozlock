@@ -22,6 +22,10 @@ render(
                 <Route path="/hidden-vaults" component={R.HiddenVaults} />
             </Route>
 
+            <Route path="/about" component={R.About} />
+            <Route path="/donate" component={R.Donate} />
+            <Route path="/import-vault" component={R.ImportVault} />
+
             <Route path="*" component={R.NotFound} />
 
         </Router>

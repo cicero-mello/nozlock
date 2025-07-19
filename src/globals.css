@@ -20,6 +20,21 @@
     -webkit-text-size-adjust: 100%;
 }
 
+body {
+    margin: unset;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    overflow: hidden;
+}
+
 * {
     box-sizing: border-box;
 
@@ -30,4 +45,5 @@
 button,
 a {
     cursor: pointer;
+    outline: none;
 }

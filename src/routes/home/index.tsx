@@ -4,7 +4,7 @@ export const Home: ParentComponent = () => {
 
     return (
         <div>
-            HOME
+            <button>button</button>
         </div>
     )
 }
