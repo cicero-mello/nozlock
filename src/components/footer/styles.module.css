@@ -1,4 +1,6 @@
 .footer {
+    --onyx-70: color-mix(in srgb, var(--color-onyx) 70%, transparent);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,6 +25,10 @@
         transition: fill 60ms linear;
     }
 
+    & path {
+        fill: var(--onyx-70);
+    }
+
     &:hover,
     &:focus {
         path {
@@ -30,7 +36,7 @@
         }
 
         rect {
-            fill: var(--color-onyx);
+            fill: var(--color-vibe);
         }
     }
 }
@@ -43,11 +49,18 @@
     user-select: none;
     font-size: 1rem;
     justify-content: end;
+
+    color: var(--onyx-70);
+
+    >span {
+        font-size: 1rem;
+        white-space: nowrap;
+    }
 }
 
 .anchor {
     text-decoration: none;
-    color: var(--color-onyx);
+    color: var(--onyx-70);
     outline: none;
     padding: 0rem 0.5ch;
     border-radius: 0.125rem;
