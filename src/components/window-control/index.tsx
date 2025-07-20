@@ -1,8 +1,20 @@
 import { getCurrentWindow } from '@tauri-apps/api/window'
 import style from "./styles.module.css"
+import { createSignal, onMount } from 'solid-js'
 
 export const WindowControl = () => {
     const appWindow = getCurrentWindow()
+    const [windowIsMaximized, setWindowIsMaximized] = createSignal(false)
+
+    onMount(async () => {
+        const isMaximized = await appWindow.isMaximized()
+        setWindowIsMaximized(isMaximized)
+    })
+
+    appWindow.onResized(async () => {
+        const isMaximized = await appWindow.isMaximized()
+        setWindowIsMaximized(isMaximized)
+    })
 
     const handleMouseDownDragWindowArea = (
         event: MouseEvent
@@ -24,19 +36,17 @@ export const WindowControl = () => {
             </div>
             <div class={style["window-buttons"]}>
                 <button
-                    aria-hidden="true"
                     tabIndex={-1}
                     class={`${style.button} ${style["minimize-window"]}`}
                     onClick={appWindow.minimize}
                 />
                 <button
-                    aria-hidden="true"
                     tabIndex={-1}
                     class={`${style.button} ${style["maximize-window"]}`}
+                    classList={{ [style.maximized]: windowIsMaximized() }}
                     onClick={appWindow.toggleMaximize}
                 />
                 <button
-                    aria-hidden="true"
                     tabIndex={-1}
                     class={`${style.button} ${style["close-window"]}`}
                     onClick={appWindow.close}
