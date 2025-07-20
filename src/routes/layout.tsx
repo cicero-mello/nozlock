@@ -1,5 +1,5 @@
 import { onCleanup, onMount, ParentComponent } from "solid-js"
-import { Footer } from "@components"
+import { Footer, WindowControl } from "@components"
 
 export const Layout: ParentComponent = (props) => {
     let mainRef: HTMLElement | undefined
@@ -24,7 +24,7 @@ export const Layout: ParentComponent = (props) => {
 
     return (
         <>
-            <header>HEADER</header>
+            <WindowControl />
             <main ref={mainRef}>
                 {props.children}
             </main>

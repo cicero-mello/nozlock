@@ -2,7 +2,6 @@
 
 :root {
     --color-cotton: #FFF3F3;
-    --color-cotton-50: #FFF3F380;
     --color-onyx: #2C2C2A;
     --color-vibe: #A07CFF;
 
@@ -22,6 +21,7 @@
 
 body {
     margin: unset;
+    user-select: none;
 }
 
 #root {
@@ -46,4 +46,9 @@ button,
 a {
     cursor: pointer;
     outline: none;
+}
+
+button {
+    border: unset;
+    background: unset;
 }
