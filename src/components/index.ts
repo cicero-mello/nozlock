@@ -1,2 +1,5 @@
 export * from "./footer"
 export * from "./window-control"
+export * from "./svg"
+export * from "./button"
+export * from "./anchor"

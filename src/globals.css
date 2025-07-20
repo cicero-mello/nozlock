@@ -51,4 +51,9 @@ a {
 button {
     border: unset;
     background: unset;
+    padding: unset;
+}
+
+a {
+    text-decoration: none;
 }
