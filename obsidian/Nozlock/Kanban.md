@@ -56,7 +56,6 @@ kanban-plugin: board
 - [ ] [48] #outro Criar Documentação Final
 - [ ] [49] #outro Testes de Executável
 - [ ] [50] #outro Pente Fino no Código
-- [ ] [51] #outro Adicionar License e Alterar Visibilidade do Repo
 
 
 ## A Fazer
@@ -69,6 +68,7 @@ kanban-plugin: board
 
 ## Feito
 
+- [ ] [51] #outro Adicionar License e Alterar Visibilidade do Repo
 
 
 
