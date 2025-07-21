@@ -7,6 +7,7 @@
 
     font-family: "Jost";
     transition: color 60ms linear;
+    text-align: center;
 
     &:disabled {
         cursor: not-allowed;

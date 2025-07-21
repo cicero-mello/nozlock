@@ -1,4 +1,4 @@
-import { GitHubSVG } from "@components/svg/git-hub"
+import { GitHubSVG } from "@components"
 import styles from "./styles.module.css"
 import { Component } from "solid-js"
 import { A } from "@solidjs/router"
@@ -14,6 +14,7 @@ export const Footer: Component = (props) => {
     return (
         <footer class={styles.footer} {...props}>
             <a
+                tabIndex={-1}
                 children={<GitHubSVG />}
                 target="_blank"
                 href="https://github.com/cicero-mello"

@@ -1,0 +1,13 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.5rem;
+    padding-bottom: 5.5vh;
+    flex: 1;
+
+    >svg {
+        max-height: 6rem;
+    }
+}

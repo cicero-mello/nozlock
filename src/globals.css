@@ -31,8 +31,10 @@ body {
 }
 
 main {
+    display: flex;
     flex: 1;
     overflow: hidden;
+    padding: 0 48px;
 }
 
 * {
