@@ -1,5 +1,5 @@
-import { Component, Show, splitProps } from "solid-js"
-import { HeaderProps } from "./types"
+import { type Component, Show, splitProps } from "solid-js"
+import type { HeaderProps } from "./types"
 import { A } from "@solidjs/router"
 import { LogoSVG } from "../svg"
 import style from "./styles.module.css"

@@ -1,4 +1,4 @@
-import { ParentComponent } from "solid-js"
+import type { ParentComponent } from "solid-js"
 import { LogoSVG, Anchor } from "@components"
 import style from "./styles.module.css"
 

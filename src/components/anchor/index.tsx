@@ -1,5 +1,5 @@
-import { ParentComponent, splitProps } from "solid-js"
-import { AnchorProps } from "./types"
+import { type ParentComponent, splitProps } from "solid-js"
+import type { AnchorProps } from "./types"
 import { A } from "@solidjs/router"
 import style from "../shared/styles/button.module.css"
 

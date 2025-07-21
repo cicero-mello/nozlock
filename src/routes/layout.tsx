@@ -1,4 +1,4 @@
-import { onCleanup, onMount, ParentComponent } from "solid-js"
+import { onCleanup, onMount, type ParentComponent } from "solid-js"
 import { Footer, WindowControl } from "@components"
 
 export const Layout: ParentComponent = (props) => {

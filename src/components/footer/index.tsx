@@ -1,6 +1,6 @@
 import { GitHubSVG } from "@components"
 import styles from "./styles.module.css"
-import { Component } from "solid-js"
+import type { Component } from "solid-js"
 import { A } from "@solidjs/router"
 
 export const Footer: Component = (props) => {

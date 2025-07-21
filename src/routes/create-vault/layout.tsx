@@ -1,5 +1,5 @@
 import { Header } from "@components/header"
-import { ParentComponent } from "solid-js"
+import type { ParentComponent } from "solid-js"
 
 export const CreateVaultLayout: ParentComponent = (props) => {
 
