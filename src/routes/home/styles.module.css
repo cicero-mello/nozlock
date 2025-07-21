@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: center;
     gap: 3.5rem;
-    padding-bottom: 5.5vh;
+    padding: 0 48px 5.5vh 48px;
     flex: 1;
 
     >svg {

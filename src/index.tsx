@@ -9,7 +9,10 @@ render(
         <Router root={R.Layout}>
 
             <Route path="/" component={R.Home} />
-            <Route path="/create-vault" component={R.CreateVault} />
+
+            <Route path="/create-vault" component={R.CreateVaultLayout} >
+                <Route path="/" component={R.CreateVault} />
+            </Route>
 
             <Route path="/vault/:id" component={R.VaultLayout}>
                 <Route path="/" component={R.Vault} />

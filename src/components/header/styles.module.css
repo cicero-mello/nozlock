@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    padding: 1rem 1.5rem;
+
+    >* {
+        z-index: 1;
+    }
+}
+
+.logo-anchor {
+    height: 1.5rem;
+    aspect-ratio: 406/100;
+    opacity: 0.5;
+    transition: opacity 60ms linear;
+
+    &:hover,
+    &:focus {
+        opacity: 1;
+    }
+}
+
+.title {
+    position: absolute;
+    line-height: 100%;
+    font-size: 1.5rem;
+    font-family: "Joan";
+    pointer-events: none;
+    color: var(--color-cotton);
+    opacity: 0.8;
+    left: 50%;
+    transform: translateX(-50%);
+}
