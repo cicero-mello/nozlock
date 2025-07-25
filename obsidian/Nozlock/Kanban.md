@@ -33,50 +33,59 @@ kanban-plugin: board
 - [ ] [46] #front-end Criar Tela About
 - [ ] [47] #front-end Criar Tela de Donate
 - [ ] [48] #outro Criar Documentação Final
-- [ ] [49] #outro Testes de Executável
+- [ ] [49] #outro Testes de Executável Final em diferentes Sistemas Operacionais
 - [ ] [50] #outro Pente Fino no Código
+- [ ] [57] #back-end Usar pasta AppData Relativa p/ gerenciar os arquivos criados (em vez de pasta em src-tauri)
 
 
 ## A Fazer
 
-- [ ] [2] #front-end  Criar Componente Input @{2025-07-23}
-- [ ] [1] #front-end Criar Componente Cofre Preview @{2025-07-23}
-- [ ] [5] #front-end Criar Componente "Numeric Action" @{2025-07-23}
-- [ ] [3] #front-end Criar Tela Criação Cofre Etapa 1 @{2025-07-23}
-- [ ] [11] #front-end  Criar Tela Criação Cofre Etapa 2 @{2025-07-23}
-- [ ] [12] #front-end  Criar Tela Criação Cofre Etapa 3 @{2025-07-23}
-- [ ] [20] #back-end Criar Função(es) p/ Listar Cofres Criados @{2025-07-24}
-- [ ] [7] #front-end  Adaptar Home p/ Listar os Cofres Criados @{2025-07-24}
-- [ ] [6] #front-end  Adaptar Header p/ Suportar Cofre Preview @{2025-07-24}
-- [ ] [8] #front-end  Criar Modal de Acesso ao Cofre @{2025-07-24}
-- [ ] [9] #front-end  Criar Componente "Card Action"(Password/Notes) @{2025-07-24}
-- [ ] [19] #back-end Criar Função(es) p/ Armazenar Senhas ao Cofre @{2025-07-25}
-- [ ] [21] #back-end Criar Função(es) p/ Armazenar Notas ao Cofre @{2025-07-25}
-- [ ] [13] #front-end  Criar Tela Inicial do Cofre @{2025-07-25}
-- [ ] [17] #front-end Criar Tela de Adição de Nota @{2025-07-25}
-- [ ] [15] #front-end  Criar Tela de Adição de Senha ao Cofre @{2025-07-25}
-- [ ] [24] #front-end Adaptar Tela do Cofre p/ Listar Valores Salvos @{2025-07-25}
-- [ ] [23] #back-end Criar Função(es) p/ Listar Senhas do Cofre @{2025-07-26}
-- [ ] [53] #back-end Criar Função p/ Deletar Senha do Cofre @{2025-07-26}
-- [ ] [54] #back-end Criar Função p/ Alterar Senha do Cofre @{2025-07-26}
-- [ ] [22] #back-end Criar Função(es) p/ Listar Notas do Cofre @{2025-07-26}
-- [ ] [55] #back-end Criar Função p/ Deletar Nota do Cofre @{2025-07-26}
-- [ ] [56] #back-end Criar Função p/ Alterar nota do Cofre @{2025-07-26}
-- [ ] [16] #front-end  Adaptar Tela de Adição de Senha ao Cofre para Modo Edição @{2025-07-26}
-- [ ] [18] #front-end Adaptar Tela de Adição de Nota p/ Modo Edição @{2025-07-26}
+- [ ] [2] #front-end  Criar Componente Input @{2025-07-24}
+- [ ] [1] #front-end Criar Componente Cofre Preview @{2025-07-24}
+- [ ] [5] #front-end Criar Componente "Numeric Action" @{2025-07-24}
+- [ ] [3] #front-end Criar Tela Criação Cofre Etapa 1 @{2025-07-24}
+- [ ] [11] #front-end  Criar Tela Criação Cofre Etapa 2 @{2025-07-24}
+- [ ] [12] #front-end  Criar Tela Criação Cofre Etapa 3 @{2025-07-24}
+- [ ] [20] #back-end Criar Função(es) p/ Listar Cofres Criados @{2025-07-25}
+- [ ] [7] #front-end  Adaptar Home p/ Listar os Cofres Criados @{2025-07-25}
+- [ ] [6] #front-end  Adaptar Header p/ Suportar Cofre Preview @{2025-07-25}
+- [ ] [8] #front-end  Criar Modal de Acesso ao Cofre @{2025-07-25}
+- [ ] [9] #front-end  Criar Componente "Card Action"(Password/Notes) @{2025-07-25}
+- [ ] [19] #back-end Criar Função(es) p/ Armazenar Senhas ao Cofre @{2025-07-26}
+- [ ] [21] #back-end Criar Função(es) p/ Armazenar Notas ao Cofre @{2025-07-26}
+- [ ] [13] #front-end  Criar Tela Inicial do Cofre @{2025-07-26}
+- [ ] [17] #front-end Criar Tela de Adição de Nota @{2025-07-26}
+- [ ] [15] #front-end  Criar Tela de Adição de Senha ao Cofre @{2025-07-26}
+- [ ] [24] #front-end Adaptar Tela do Cofre p/ Listar Valores Salvos @{2025-07-26}
+- [ ] [23] #back-end Criar Função(es) p/ Listar Senhas do Cofre @{2025-07-27}
+- [ ] [53] #back-end Criar Função p/ Deletar Senha do Cofre @{2025-07-27}
+- [ ] [54] #back-end Criar Função p/ Alterar Senha do Cofre @{2025-07-27}
+- [ ] [22] #back-end Criar Função(es) p/ Listar Notas do Cofre @{2025-07-27}
+- [ ] [55] #back-end Criar Função p/ Deletar Nota do Cofre @{2025-07-27}
+- [ ] [56] #back-end Criar Função p/ Alterar nota do Cofre @{2025-07-27}
+- [ ] [16] #front-end  Adaptar Tela de Adição de Senha ao Cofre para Modo Edição @{2025-07-27}
+- [ ] [18] #front-end Adaptar Tela de Adição de Nota p/ Modo Edição @{2025-07-27}
 
 
 ## Fazendo
 
-- [ ] [52] #back-end Criar Função para Salvar o Cofre @{2025-07-22}
-- [ ] [42] #front-end Criar Tela de Settings @{2025-07-22}
-- [ ] [40] #front-end Criar Componente Numeric Button @{2025-07-22}
-- [ ] [41] #front-end Criar Componente Checkbox @{2025-07-22}
-- [ ] [4] #front-end Usar Fontes CSS Locais @{2025-07-22}
+- [ ] [52] #back-end Criar Módulo Vault (+comando) @{2025-07-23}
+- [ ] [40] #front-end Criar Componente Numeric Button @{2025-07-23}
+- [ ] [41] #front-end Criar Componente Checkbox @{2025-07-23}
+- [ ] [42] #front-end Criar Tela de Settings @{2025-07-23}
+- [ ] [4] #front-end Usar Fontes CSS Locais @{2025-07-23}
+- [ ] [59] #back-end Criar Módulo Nonce
+- [ ] [60] #back-end Criar Módulo Filename
+- [ ] [61] #back-end Criar Módulo Argon2
+- [ ] [62] #back-end Criar Módulo AES-GCM
+- [ ] [63] #back-end Criar Módulo FileManipulation
+- [ ] [64] #front-end Integrar comando de criação de vault
+- [ ] [65] #front-end Integrar comando de geração de diceware
 
 
 ## Feito
 
+- [ ] [58] #back-end Criar Módulo Diceware (+comando de geração)
 - [ ] [51] #outro Adicionar License e Alterar Visibilidade do Repo
 
 
