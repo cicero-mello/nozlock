@@ -74,7 +74,6 @@ kanban-plugin: board
 - [ ] [41] #front-end Criar Componente Checkbox @{2025-07-23}
 - [ ] [42] #front-end Criar Tela de Settings @{2025-07-23}
 - [ ] [4] #front-end Usar Fontes CSS Locais @{2025-07-23}
-- [ ] [59] #back-end Criar Módulo Nonce
 - [ ] [60] #back-end Criar Módulo Filename
 - [ ] [61] #back-end Criar Módulo Argon2
 - [ ] [62] #back-end Criar Módulo AES-GCM
@@ -86,6 +85,7 @@ kanban-plugin: board
 ## Feito
 
 - [ ] [58] #back-end Criar Módulo Diceware (+comando de geração)
+- [ ] [59] #back-end Criar Módulo Nonce
 - [ ] [51] #outro Adicionar License e Alterar Visibilidade do Repo
 
 
