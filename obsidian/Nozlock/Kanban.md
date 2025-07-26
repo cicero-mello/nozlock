@@ -74,13 +74,13 @@ kanban-plugin: board
 - [ ] [41] #front-end Criar Componente Checkbox @{2025-07-23}
 - [ ] [42] #front-end Criar Tela de Settings @{2025-07-23}
 - [ ] [4] #front-end Usar Fontes CSS Locais @{2025-07-23}
-- [ ] [62] #back-end Criar Módulo AES-GCM
 - [ ] [64] #front-end Integrar comando de criação de vault
 - [ ] [65] #front-end Integrar comando de geração de diceware
 
 
 ## Feito
 
+- [ ] [62] #back-end Criar Módulo AES-GCM
 - [ ] [61] #back-end Criar Módulo Argon2
 - [ ] [63] #back-end Criar Módulo FileManipulation
 - [ ] [60] #back-end Criar Módulo Filename
