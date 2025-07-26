@@ -76,13 +76,13 @@ kanban-plugin: board
 - [ ] [4] #front-end Usar Fontes CSS Locais @{2025-07-23}
 - [ ] [61] #back-end Criar Módulo Argon2
 - [ ] [62] #back-end Criar Módulo AES-GCM
-- [ ] [63] #back-end Criar Módulo FileManipulation
 - [ ] [64] #front-end Integrar comando de criação de vault
 - [ ] [65] #front-end Integrar comando de geração de diceware
 
 
 ## Feito
 
+- [ ] [63] #back-end Criar Módulo FileManipulation
 - [ ] [60] #back-end Criar Módulo Filename
 - [ ] [58] #back-end Criar Módulo Diceware (+comando de geração)
 - [ ] [59] #back-end Criar Módulo Nonce
