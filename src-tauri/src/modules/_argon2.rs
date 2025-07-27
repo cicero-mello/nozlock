@@ -20,7 +20,7 @@ pub struct Password {
 
 pub fn generate_hash(
     password: &str,
-    salt_option: Option<&SaltString>
+    salt_option: Option<&Vec<u8>>
 ) -> Result<Password, Error> {
     let argon2_params = match Params::new(
         MEMORY_COST_MIB,
@@ -42,7 +42,13 @@ pub fn generate_hash(
     );
 
     let salt_string = match salt_option {
-        Some(salt) => salt.clone(),
+        Some(salt) => match SaltString::encode_b64(salt){
+            Ok(salt_string) => salt_string,
+            Err(error) => return Err(Error::new(
+                ErrorKind::InvalidData,
+                format!("Error on Salt Conversion:\n{}", error)
+            )),
+        },
         None => SaltString::generate(&mut OsRng)
     };
 

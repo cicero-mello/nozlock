@@ -46,7 +46,6 @@ kanban-plugin: board
 - [ ] [3] #front-end Criar Tela Criação Cofre Etapa 1 @{2025-07-24}
 - [ ] [11] #front-end  Criar Tela Criação Cofre Etapa 2 @{2025-07-24}
 - [ ] [12] #front-end  Criar Tela Criação Cofre Etapa 3 @{2025-07-24}
-- [ ] [20] #back-end Criar Função(es) p/ Listar Cofres Criados @{2025-07-25}
 - [ ] [7] #front-end  Adaptar Home p/ Listar os Cofres Criados @{2025-07-25}
 - [ ] [6] #front-end  Adaptar Header p/ Suportar Cofre Preview @{2025-07-25}
 - [ ] [8] #front-end  Criar Modal de Acesso ao Cofre @{2025-07-25}
@@ -69,7 +68,6 @@ kanban-plugin: board
 
 ## Fazendo
 
-- [ ] [52] #back-end Criar Módulo Vault (+comando) @{2025-07-23}
 - [ ] [40] #front-end Criar Componente Numeric Button @{2025-07-23}
 - [ ] [41] #front-end Criar Componente Checkbox @{2025-07-23}
 - [ ] [42] #front-end Criar Tela de Settings @{2025-07-23}
@@ -80,6 +78,8 @@ kanban-plugin: board
 
 ## Feito
 
+- [ ] [20] #back-end Criar Função(es) p/ Listar Cofres Criados @{2025-07-25}
+- [ ] [52] #back-end Criar Módulo Vault (+comando) @{2025-07-23}
 - [ ] [62] #back-end Criar Módulo AES-GCM
 - [ ] [61] #back-end Criar Módulo Argon2
 - [ ] [63] #back-end Criar Módulo FileManipulation
