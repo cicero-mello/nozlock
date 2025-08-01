@@ -1,34 +1,18 @@
-import { onCleanup, onMount, type ParentComponent } from "solid-js"
-import { Footer, WindowControl } from "@components"
+import { type ParentComponent } from "solid-js"
+import { Aside, Header } from "@components"
+import style from "./layout.module.css"
 
 export const Layout: ParentComponent = (props) => {
-    let mainRef: HTMLElement | undefined
-    let footerRef: HTMLElement | undefined
-
-    onMount(() => {
-        if (!footerRef || !mainRef) return
-
-        const updateMainPaddingBottom = () => {
-            mainRef.style.paddingBottom = (
-                footerRef.offsetHeight + "px"
-            )
-        }
-
-        const observer = new ResizeObserver(
-            updateMainPaddingBottom
-        )
-
-        observer.observe(footerRef)
-        onCleanup(() => observer.disconnect())
-    })
 
     return (
-        <>
-            <WindowControl />
-            <main ref={mainRef}>
-                {props.children}
-            </main>
-            <Footer ref={footerRef} />
-        </>
+        <div class={style.layout}>
+            <Aside />
+            <div class={style.wrapper}>
+                <Header />
+                <main class={style.main}>
+                    {props.children}
+                </main>
+            </div>
+        </div>
     )
 }

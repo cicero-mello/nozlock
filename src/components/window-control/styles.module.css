@@ -5,10 +5,12 @@
 }
 
 .window-drag {
-    width: calc(100% - (var(--button-width) * 3));
+    /* width: calc(100% - (var(--button-width) * 3)); */
+    width: 100vw;
     position: fixed;
     display: flex;
-    height: 40px;
+    height: 36px;
+    top: 0;
 }
 
 .window-buttons {
@@ -27,7 +29,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 32px;
+    height: 36px;
     width: var(--button-width);
     color: var(--color-cotton);
 }
