@@ -1,12 +1,18 @@
 import { GitHubSVG, ImportSVG, LogoSVG, NotesSVG, SettingsSVG, VaultSVG } from "../svg"
 import { getCurrentWindow } from "@tauri-apps/api/window"
+import { useLocation } from "@solidjs/router"
 import { mockVaultNameList } from "./mock"
-import { type Component } from "solid-js"
+import { createMemo, type Component } from "solid-js"
 import style from "./styles.module.css"
 import { A } from "@solidjs/router"
 
 export const Aside: Component = () => {
     const appWindow = getCurrentWindow()
+    const location = useLocation()
+
+    const vaultRouteId = createMemo(() => (
+        location.pathname.split("/")[2]
+    ))
 
     const handleMouseDownOnDragWindowArea = (
         event: MouseEvent
@@ -41,6 +47,12 @@ export const Aside: Component = () => {
                     <A
                         href={`vault/${encoded}`}
                         onClick={(e) => { e.currentTarget.blur() }}
+                        classList={{
+                            [style["vault-anchor"]]: true,
+                            [style["vault-anchor-match-current-page"]]: (
+                                vaultRouteId() === encoded
+                            )
+                        }}
                     >
                         <VaultSVG /> <span>{name}</span>
                     </A>

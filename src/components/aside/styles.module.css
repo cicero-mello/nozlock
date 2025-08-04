@@ -78,42 +78,53 @@
     &::-webkit-scrollbar-thumb:active {
         cursor: grabbing;
     }
+}
 
-    a {
-        display: flex;
-        align-items: center;
-        color: var(--color-milk-2);
-        transition: color 60ms linear;
-        gap: 8px;
-        padding: 4px;
-        font-size: 1rem;
+.vault-anchor {
+    display: flex;
+    align-items: center;
+    color: var(--color-milk-2);
+    transition: color 60ms linear;
+    gap: 8px;
+    padding: 4px;
+    font-size: 1rem;
+    border-radius: 2px;
 
-        span {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            width: fit-content;
-        }
+    span {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: fit-content;
+    }
 
-        svg {
-            height: 1.125rem;
-            min-width: 1.125rem;
-        }
+    svg {
+        height: 1.125rem;
+        min-width: 1.125rem;
+    }
+
+    :global(.fill-color) {
+        transition: fill 60ms linear;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-cotton-14);
+        color: var(--color-milk);
 
         :global(.fill-color) {
-            transition: fill 60ms linear;
+            fill: var(--color-milk);
         }
+    }
+}
 
-        &:hover,
-        &:focus {
-            background-color: var(--color-milk-3);
-            border-radius: 2px;
-            color: var(--color-milk);
+.vault-anchor-match-current-page,
+.vault-anchor-match-current-page:focus,
+.vault-anchor-match-current-page:hover {
+    background-color: var(--color-cotton-14);
+    color: var(--color-cotton-80);
 
-            :global(.fill-color) {
-                fill: var(--color-milk);
-            }
-        }
+    :global(.fill-color) {
+        fill: var(--color-cotton-80);
     }
 }
 
