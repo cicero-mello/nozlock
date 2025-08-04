@@ -32,6 +32,9 @@
             "@components": [
                 "src/components/index.ts"
             ],
+            "@context": [
+                "src/context/index.ts"
+            ],
             "@styles": [
                 "src/styles.ts"
             ]

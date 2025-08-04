@@ -74,6 +74,7 @@ kanban-plugin: board
 - [ ] [4] #front-end Usar Fontes CSS Locais @{2025-07-23}
 - [ ] [64] #front-end Integrar comando de criação de vault
 - [ ] [65] #front-end Integrar comando de geração de diceware
+- [ ] [66] Organizar Kanban após atualização do design para V2
 
 
 ## Feito

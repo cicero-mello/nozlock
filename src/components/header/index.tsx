@@ -1,6 +1,7 @@
 import { createSignal, onMount, type Component } from "solid-js"
 import { getCurrentWindow } from "@tauri-apps/api/window"
 import style from "./styles.module.css"
+import { Title } from "./title"
 
 export const Header: Component = () => {
     const appWindow = getCurrentWindow()
@@ -31,6 +32,7 @@ export const Header: Component = () => {
 
     return (
         <header class={style.header} onMouseDown={handleMouseDownDragWindowArea}>
+            <Title />
             <div class={style["window-buttons"]}>
                 <button
                     tabIndex={-1}
