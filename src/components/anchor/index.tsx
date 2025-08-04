@@ -1,7 +1,7 @@
 import { type ParentComponent, splitProps } from "solid-js"
 import type { AnchorProps } from "./types"
 import { A } from "@solidjs/router"
-import style from "../shared/styles/button.module.css"
+import style from "../button/styles.module.css"
 
 export const Anchor: ParentComponent<AnchorProps> = (props) => {
     const [, rest] = splitProps(props, ["mode", "classList"])

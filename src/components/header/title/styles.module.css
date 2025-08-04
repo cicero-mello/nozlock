@@ -1,0 +1,67 @@
+.title {
+    --window-buttons-width: calc(2.625rem * 3);
+
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+    gap: 0.25rem;
+    height: 100%;
+    overflow: hidden;
+    max-width: calc(100% - var(--window-buttons-width));
+
+    svg {
+        height: 1rem;
+        min-width: 1rem;
+
+        :global(.fill-color) {
+            fill: var(--color-cotton-80);
+        }
+    }
+
+    h1 {
+        font-size: 1rem;
+        font-family: "Joan";
+        color: var(--color-cotton-80);
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+}
+
+.settings-wrapper {
+    display: flex;
+    align-items: center;
+
+    span {
+        margin: 0 0.25rem;
+        width: 1px;
+        height: 1.25rem;
+        border-radius: 0.125rem;
+        background-color: var(--color-milk-4);
+    }
+
+    svg {
+        height: 1.25rem;
+        width: 1.25rem;
+
+        :global(.stroke-color) {
+            stroke: var(--color-milk-4);
+            transition: 60ms linear;
+        }
+    }
+
+    button {
+        height: 1.25rem;
+        margin-right: 2.5rem;
+
+        &:hover,
+        &:focus {
+            :global(.stroke-color) {
+                stroke: var(--color-cotton-80);
+            }
+        }
+    }
+}

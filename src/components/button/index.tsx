@@ -1,6 +1,6 @@
 import { type ParentComponent, splitProps } from "solid-js"
 import type { ButtonProps } from "./types"
-import style from "../shared/styles/button.module.css"
+import style from "./styles.module.css"
 
 export const Button: ParentComponent<ButtonProps> = (props) => {
     const [, rest] = splitProps(props, ["mode", "classList"])

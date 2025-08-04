@@ -1,0 +1,187 @@
+.aside {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 13.75rem;
+    background-color: var(--color-coffee);
+
+    border-right: 2px solid var(--color-milk-4);
+    position: sticky;
+    top: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.25rem;
+    position: relative;
+    -webkit-user-drag: none;
+
+    a {
+        display: flex;
+        height: fit-content;
+
+        svg {
+            height: 1.125rem;
+
+            >* {
+                fill: var(--color-milk-2);
+                transition: fill 60ms linear;
+            }
+        }
+
+        &:hover,
+        &:focus {
+            svg>* {
+                fill: var(--color-cotton-90);
+            }
+        }
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 86%;
+        height: 2px;
+        background-color: var(--color-milk-4);
+        bottom: 0;
+    }
+}
+
+.vault-list-indicator {
+    font-family: "Joan";
+    font-size: 0.875rem;
+    margin: 24px 12px 8px 12px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 12px 24px 12px;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-milk-3);
+        border-radius: 5px;
+        cursor: grab;
+        width: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        cursor: grabbing;
+    }
+}
+
+.vault-anchor {
+    display: flex;
+    align-items: center;
+    color: var(--color-milk-2);
+    transition: color 60ms linear;
+    gap: 8px;
+    padding: 4px;
+    font-size: 1rem;
+    border-radius: 2px;
+
+    span {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        width: fit-content;
+    }
+
+    svg {
+        height: 1.125rem;
+        min-width: 1.125rem;
+    }
+
+    :global(.fill-color) {
+        transition: fill 60ms linear;
+    }
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-cotton-14);
+        color: var(--color-milk);
+
+        :global(.fill-color) {
+            fill: var(--color-milk);
+        }
+    }
+}
+
+.vault-anchor-match-current-page,
+.vault-anchor-match-current-page:focus,
+.vault-anchor-match-current-page:hover {
+    background-color: var(--color-cotton-14);
+    color: var(--color-cotton-80);
+
+    :global(.fill-color) {
+        fill: var(--color-cotton-80);
+    }
+}
+
+.new-vault-button {
+    color: var(--color-milk-2);
+    border: 1px solid var(--color-milk-2);
+    margin: 12px;
+    text-align: center;
+    padding: 0.25rem;
+    border-radius: 2px;
+    transition: background 60ms linear, color 60ms linear;
+
+    &:hover,
+    &:focus {
+        background-color: var(--color-vibe);
+        color: var(--color-cotton);
+    }
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-top: 2px solid var(--color-milk-4);
+    padding: 12px;
+
+    >a {
+        display: flex;
+        align-items: center;
+        color: var(--color-milk-2);
+        transition: color 60ms linear;
+        gap: 0.5rem;
+        width: fit-content;
+
+        svg {
+            height: 1.125rem;
+        }
+
+        :global(.fill-color) {
+            transition: fill 60ms linear;
+        }
+
+        :global(.stroke-color) {
+            transition: stroke 60ms linear;
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--color-cotton-90);
+
+            :global(.fill-color) {
+                fill: var(--color-cotton-90);
+            }
+
+            :global(.stroke-color) {
+                stroke: var(--color-cotton-90);
+            }
+        }
+    }
+}

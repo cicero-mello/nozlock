@@ -2,7 +2,21 @@
 
 :root {
     --color-cotton: #FFF3F3;
+    --color-cotton-90: #D9D9D9;
+    --color-cotton-80: #D5CBCA;
+    --color-cotton-70: #BFB7B7;
+    --color-cotton-50: #958F8E;
+    --color-cotton-30: #6B6866;
+    --color-cotton-14: #4A4846;
+    --color-cotton-10: #41403E;
+
+    --color-milk: #ACA4A3;
+    --color-milk-2: #9B9493;
+    --color-milk-3: #595654;
+    --color-milk-4: #565453;
+
     --color-onyx: #2C2C2A;
+    --color-coffee: #373634;
     --color-vibe: #A07CFF;
 
     font-family: Jost, Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -30,18 +44,8 @@ body {
     min-height: 100vh;
 }
 
-main {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: hidden;
-}
-
 * {
     box-sizing: border-box;
-
-    /* temporário, pra facilitar */
-    font-size: 1.125rem;
 }
 
 button,
@@ -60,6 +64,7 @@ a {
     text-decoration: none;
 }
 
+p,
 h1,
 h2,
 h3,
