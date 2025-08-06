@@ -67,7 +67,6 @@ kanban-plugin: board
 ## A Fazer
 
 - [ ] [67] #front-end Criar Toast Notificação @{2025-08-05}
-- [ ] [40] #front-end Criar Componente Numeric Radio @{2025-08-05}
 - [ ] [5] #front-end Criar Componente Password Generator @{2025-08-05}
 - [ ] [41] #front-end Criar Componente Checkbox @{2025-08-05}
 - [ ] [1] #front-end Criar Componente Cofre Preview @{2025-08-05}
@@ -81,6 +80,7 @@ kanban-plugin: board
 
 ## Feito
 
+- [ ] [40] #front-end Criar Componente Numeric Radio @{2025-08-05}
 - [ ] [66] Organizar Kanban após atualização do design para V2
 - [ ] [20] #back-end Criar Função(es) p/ Listar Cofres Criados @{2025-07-25}
 - [ ] [52] #back-end Criar Módulo Vault (+comando) @{2025-07-23}

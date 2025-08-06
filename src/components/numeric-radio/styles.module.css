@@ -1,0 +1,64 @@
+.wrapper {
+    --font-size: 1rem;
+
+    transition: color 60ms linear;
+    user-select: none;
+
+    svg {
+        height: var(--font-size);
+        width: var(--font-size);
+    }
+
+    :global(.fill-color) {
+        transition: fill 60ms linear;
+    }
+
+    &:has(*:focus),
+    &:has(*:hover) {
+        color: var(--color-cotton-90);
+
+        :global(.fill-color) {
+            fill: var(--color-cotton-90);
+        }
+    }
+}
+
+.commands {
+    display: flex;
+    align-items: center;
+    gap: 0.5ch;
+
+    >p {
+        font-size: var(--font-size);
+        min-width: 2ch;
+        text-align: center;
+    }
+
+    >button {
+        display: flex;
+        align-items: center;
+        height: fit-content;
+    }
+
+    >button:hover {
+        :global(.fill-color) {
+            fill: var(--color-vibe);
+        }
+    }
+
+    >button:last-child {
+        transform: rotateY(180deg);
+    }
+}
+
+.label {
+    font-size: var(--font-size);
+}
+
+.input {
+    position: absolute;
+    appearance: none;
+    width: 0;
+    height: 0;
+    overflow: hidden
+}
