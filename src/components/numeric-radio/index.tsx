@@ -101,6 +101,7 @@ export const NumericRadio: Component<NumericRadioProps> = (props) => {
             <div class={style.commands} on:click={focusCurrentInput}>
                 <button
                     aria-hidden="true"
+                    type="button"
                     on:mousedown={(e) => e.preventDefault()}
                     tabIndex={-1}
                     children={<TriangleSVG />}
@@ -109,6 +110,7 @@ export const NumericRadio: Component<NumericRadioProps> = (props) => {
                 <p>{getCurrentValue()}</p>
                 <button
                     aria-hidden="true"
+                    type="button"
                     on:mousedown={(e) => e.preventDefault()}
                     tabIndex={-1}
                     children={<TriangleSVG />}
