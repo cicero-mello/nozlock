@@ -26,8 +26,8 @@ export const Checkbox: Component<CheckboxProps> = (props) => {
                 type="checkbox"
                 class={style.input}
                 name={props.inputName}
-                onChange={(e) => props.onChange?.(e.target.checked)}
-                onKeyDown={(event) => {
+                on:change={(e) => props.onChange?.(e.target.checked)}
+                on:keydown={(event) => {
                     if (event.key === "Enter") {
                         event.currentTarget.click()
                     }

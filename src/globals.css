@@ -36,6 +36,7 @@
 body {
     margin: unset;
     user-select: none;
+    overflow: hidden;
 }
 
 #root {
@@ -72,4 +73,9 @@ h4,
 h5,
 input {
     margin: unset;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
 }

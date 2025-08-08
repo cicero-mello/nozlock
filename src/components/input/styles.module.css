@@ -1,0 +1,102 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5ch;
+    width: 100%;
+    max-width: 21rem;
+    position: relative;
+
+    &:has(:global(.eye-button)) {
+        input {
+            padding-right: 2rem;
+        }
+    }
+}
+
+.button {
+    height: 1.25rem;
+    width: 1.25rem;
+    position: absolute;
+    bottom: 100%;
+    right: 100%;
+
+    svg {
+        border-radius: 50%;
+        transition: background-color 60ms linear;
+    }
+
+    &:hover,
+    &:focus {
+        svg {
+            background-color: var(--color-vibe);
+        }
+
+        :global(.fill-color) {
+            fill: var(--color-cotton);
+        }
+
+        :global(.stroke-color) {
+            stroke: var(--color-cotton);
+        }
+    }
+}
+
+.label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-cotton-80);
+}
+
+.input {
+    appearance: none;
+    outline: none;
+    background: none;
+    border: unset;
+    border-bottom: 2px solid var(--color-cotton-50);
+    color: var(--color-cotton-50);
+    transition: color 60ms linear, border-bottom-color 60ms linear;
+
+    font-size: 1.125rem;
+    width: 100%;
+
+    padding: 0.5ch 0.5ch;
+
+    &::placeholder {
+        color: var(--color-milk-4);
+        transition: color 60ms linear;
+    }
+
+    &:focus {
+        border-bottom-color: var(--color-vibe);
+        color: var(--color-cotton-80);
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+
+.eye-button {
+    appearance: none;
+
+    position: absolute;
+    bottom: 0.25rem;
+    right: 0;
+    cursor: pointer;
+
+    svg {
+        height: 1.25rem;
+    }
+
+    :global(.stroke-color) {
+        stroke: var(--color-cotton-50);
+        transition: stroke 60ms linear;
+    }
+
+    &:hover,
+    &:focus {
+        :global(.stroke-color) {
+            stroke: var(--color-vibe);
+        }
+    }
+}

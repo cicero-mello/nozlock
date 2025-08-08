@@ -67,7 +67,6 @@ kanban-plugin: board
 
 ## A Fazer
 
-- [ ] [2] #front-end  Criar Componente Input @{2025-08-05}
 - [ ] [1] #front-end Criar Componente Cofre Preview @{2025-08-05}
 - [ ] [67] #front-end Criar Toast Notificação @{2025-08-05}
 - [ ] [69] #front-end Criar Modal @{2025-08-05}
@@ -79,6 +78,7 @@ kanban-plugin: board
 
 ## Feito
 
+- [ ] [2] #front-end  Criar Componente Input @{2025-08-05}
 - [ ] [41] #front-end Criar Componente Checkbox @{2025-08-05}
 - [ ] [40] #front-end Criar Componente Numeric Radio @{2025-08-05}
 - [ ] [66] Organizar Kanban após atualização do design para V2
