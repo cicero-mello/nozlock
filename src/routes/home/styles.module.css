@@ -5,7 +5,7 @@
     align-items: center;
     gap: 3.5rem;
     padding: 0 48px;
-    height: 100%;
+    min-height: 100%;
     flex: 1;
 
     >svg {
@@ -15,6 +15,4 @@
             fill: var(--color-cotton-90);
         }
     }
-
-
 }

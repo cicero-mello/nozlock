@@ -11,6 +11,23 @@
 }
 
 .main {
-    flex: 1;
+    --header-height: 2.25rem;
+
     width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: calc(100vh - var(--header-height));
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--color-milk-4);
+        cursor: grab;
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        cursor: grabbing;
+    }
 }
