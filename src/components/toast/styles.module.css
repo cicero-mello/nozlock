@@ -1,0 +1,25 @@
+.toast {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    border-radius: 2px;
+    padding: 0.25rem 1.125rem;
+    background-color: var(--color-cotton);
+    color: var(--color-onyx);
+    font-size: 1rem;
+    animation: come-from-right 400ms ease-out;
+    transition: opacity 200ms ease-out;
+    max-width: 18rem;
+}
+
+@keyframes come-from-right {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

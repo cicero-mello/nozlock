@@ -1,7 +1,7 @@
 /* @refresh reload */
 import { render } from "solid-js/web"
 import { Router, Route } from "@solidjs/router"
-import { HeaderContextProvider } from "./context"
+import { HeaderContextProvider, ToastContextProvider } from "./context"
 import * as R from "./routes"
 import "./globals.css"
 
@@ -33,8 +33,10 @@ const Routes = () => (
 
 render(
     () => (
-        <HeaderContextProvider>
-            <Routes />
-        </HeaderContextProvider>
+        <ToastContextProvider>
+            <HeaderContextProvider>
+                <Routes />
+            </HeaderContextProvider>
+        </ToastContextProvider>
     ), document.getElementById("root") as HTMLElement
 )

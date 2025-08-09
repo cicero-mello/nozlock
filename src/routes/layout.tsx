@@ -9,7 +9,7 @@ export const Layout: ParentComponent = (props) => {
             <Aside />
             <div class={style.wrapper}>
                 <Header />
-                <main class={style.main}>
+                <main class={style.main} id="main">
                     {props.children}
                 </main>
             </div>
