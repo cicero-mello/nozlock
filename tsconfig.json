@@ -35,6 +35,9 @@
             "@context": [
                 "src/context/index.ts"
             ],
+            "@hooks": [
+                "src/hooks/index.ts"
+            ],
             "@styles": [
                 "src/styles.ts"
             ]

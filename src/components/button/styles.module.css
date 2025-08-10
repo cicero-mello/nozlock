@@ -3,6 +3,7 @@
 
     display: flex;
     width: fit-content;
+    height: fit-content;
     position: relative;
 
     font-family: "Jost";
@@ -12,54 +13,107 @@
     &:disabled {
         cursor: not-allowed;
     }
+}
 
-    &.main {
-        color: var(--color-cotton);
-        font-size: 1.25rem;
-        border: 0.125rem solid var(--color-cotton);
-        padding: 0.5rem 2rem;
-        border-radius: 0.125rem;
-        transition: background-color 60ms linear, border-color 60ms linear;
+.main {
+    color: var(--color-cotton);
+    font-size: 1.25rem;
+    border: 0.125rem solid var(--color-cotton);
+    padding: 0.5rem 2rem;
+    border-radius: 0.125rem;
+    transition: background-color 60ms linear, border-color 60ms linear;
 
-        &:disabled {
-            color: var(--cotton-50);
-            border-color: var(--cotton-50);
+    &:disabled {
+        color: var(--cotton-50);
+        border-color: var(--cotton-50);
+    }
+
+    &:not(&:disabled) {
+
+        &:hover,
+        &:focus {
+            border-color: var(--color-vibe);
+            background-color: var(--color-vibe);
         }
+    }
+}
 
-        &:not(&:disabled) {
+.soft {
+    color: var(--cotton-50);
+    font-size: 1.125rem;
 
-            &:hover,
-            &:focus {
-                border-color: var(--color-vibe);
-                background-color: var(--color-vibe);
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--cotton-50);
+        transition: background-color 60ms linear;
+        border-radius: 1rem;
+    }
+
+    &:not(&:disabled) {
+
+        &:hover,
+        &:focus {
+            color: var(--color-cotton);
+
+            &::before {
+                background-color: var(--color-cotton);
             }
         }
     }
+}
 
-    &.soft {
+.modal-primary {
+    color: var(--color-cotton-50);
+    font-size: 1.125rem;
+    border: 2px solid var(--color-cotton-50);
+    padding: 0.25rem 2rem;
+    border-radius: 2px;
+    transition: background-color 60ms linear, border-color 60ms linear;
+
+    &:disabled {
         color: var(--cotton-50);
-        font-size: 1.125rem;
+        border-color: var(--cotton-50);
+    }
 
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 0.125rem;
-            background-color: var(--cotton-50);
-            transition: background-color 60ms linear;
-            border-radius: 1rem;
+    &:not(&:disabled) {
+
+        &:hover,
+        &:focus {
+            color: var(--color-cotton);
+            border-color: var(--color-vibe);
+            background-color: var(--color-vibe);
         }
+    }
+}
 
-        &:not(&:disabled) {
+.modal-secondary {
+    color: var(--cotton-50);
+    margin: 0.25rem 2rem;
+    font-size: 1.125rem;
 
-            &:hover,
-            &:focus {
-                color: var(--color-cotton);
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--cotton-50);
+        transition: background-color 60ms linear;
+        border-radius: 1rem;
+    }
 
-                &::before {
-                    background-color: var(--color-cotton);
-                }
+    &:not(&:disabled) {
+
+        &:hover,
+        &:focus {
+            color: var(--color-cotton-90);
+
+            &::before {
+                background-color: var(--color-cotton-90);
             }
         }
     }

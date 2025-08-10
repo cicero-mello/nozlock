@@ -10,8 +10,10 @@ export const Button: ParentComponent<ButtonProps> = (props) => {
             {...rest}
             classList={{
                 [style.button]: true,
-                [style.main]: props.mode != "soft",
+                [style.main]: props.mode == "main" || !props.mode,
                 [style.soft]: props.mode == "soft",
+                [style["modal-primary"]]: props.mode === "modal-primary",
+                [style["modal-secondary"]]: props.mode === "modal-secondary",
                 ...props.classList
             }}
         />
