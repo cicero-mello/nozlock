@@ -79,3 +79,9 @@ input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear {
     display: none;
 }
+
+::selection {
+    background: var(--color-vibe);
+    color: var(--color-cotton);
+    -webkit-text-stroke-color: var(--color-cotton);
+}
