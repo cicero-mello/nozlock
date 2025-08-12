@@ -1,0 +1,9 @@
+.wrapper {
+    transition: opacity 120ms ease-in-out;
+    opacity: 1;
+    flex: 1;
+
+    &:global(.hide) {
+        opacity: 0;
+    }
+}
