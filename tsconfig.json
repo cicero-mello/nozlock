@@ -38,6 +38,9 @@
             "@hooks": [
                 "src/hooks/index.ts"
             ],
+            "@api": [
+                "src/api/index.ts"
+            ],
             "@styles": [
                 "src/styles.ts"
             ]

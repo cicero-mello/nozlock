@@ -14,14 +14,14 @@
         min-width: 1rem;
 
         :global(.fill-color) {
-            fill: var(--color-cotton-80);
+            fill: var(--color-cotton-50);
         }
     }
 
     h1 {
         font-size: 1rem;
         font-family: "Joan";
-        color: var(--color-cotton-80);
+        color: var(--color-cotton-50);
 
         display: -webkit-box;
         -webkit-line-clamp: 1;

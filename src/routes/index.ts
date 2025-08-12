@@ -1,7 +1,6 @@
 export * from "./home"
 
 export * from "./create-vault"
-export * from "./create-vault/layout"
 
 export * from "./import-vault"
 export * from "./about"

@@ -1,0 +1,18 @@
+.section {
+    display: flex;
+    height: 100%;
+    position: relative;
+    padding: 24px 48px;
+    min-height: fit-content;
+}
+
+.center-box {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    max-width: 21rem;
+    margin: auto;
+    padding: 1.5rem 0;
+    width: 100%;
+    align-items: flex-end;
+}

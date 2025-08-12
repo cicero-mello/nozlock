@@ -16,10 +16,10 @@
 }
 
 .main {
-    color: var(--color-cotton);
-    font-size: 1.25rem;
-    border: 0.125rem solid var(--color-cotton);
-    padding: 0.5rem 2rem;
+    color: var(--color-cotton-80);
+    font-size: 1.125rem;
+    border: 0.125rem solid var(--color-cotton-80);
+    padding: 0.375rem 2rem;
     border-radius: 0.125rem;
     transition: background-color 60ms linear, border-color 60ms linear;
 
@@ -32,6 +32,7 @@
 
         &:hover,
         &:focus {
+            color: var(--color-cotton);
             border-color: var(--color-vibe);
             background-color: var(--color-vibe);
         }
