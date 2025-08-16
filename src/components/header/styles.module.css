@@ -8,6 +8,8 @@
     z-index: 1;
     border-bottom: 2px solid var(--color-milk-4);
     background-color: var(--color-onyx);
+
+    user-select: none;
 }
 
 .window-buttons {

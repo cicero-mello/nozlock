@@ -52,7 +52,7 @@ export const RenderControl: Component<RenderControlProps> = (props) => {
             ref={(element) => wrapperRef = element}
             class={style.wrapper}
         >
-            {props.elements[getCurrentIndex()]}
+            {props.elements[getCurrentIndex()]()}
         </div>
     )
 }

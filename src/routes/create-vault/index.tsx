@@ -1,6 +1,7 @@
 import { type RenderControlRef, RenderControl } from "@components"
 import { createSignal, onMount, type Component } from "solid-js"
 import { ConfirmationSection, NameSection, PassSection } from "./sections"
+import type { DicewareGeneratorResponse } from "@api"
 import style from "./styles.module.css"
 import { useHeaderContext } from "@context"
 import { VaultPreview } from "./vault-preview"
@@ -10,8 +11,10 @@ export const CreateVault: Component = () => {
 
     let renderControlRef: RenderControlRef
     const [getName, setName] = createSignal("")
-    // const [getPass, setPass] = createSignal("")
-    // const [getConfirmedPass, setConfirmedPass] = createSignal("")
+    const [getDiceware, setDiceware] = createSignal<DicewareGeneratorResponse>({
+        password: "",
+        separator: ""
+    })
 
     onMount(() => {
         headerContext.setData({
@@ -24,19 +27,25 @@ export const CreateVault: Component = () => {
             <RenderControl
                 ref={(ref) => renderControlRef = ref}
                 elements={[
-                    <NameSection
+                    () => <NameSection
                         getName={getName}
                         setName={setName}
                         goNext={() => renderControlRef.next()}
                     />,
-                    <PassSection />,
-                    <ConfirmationSection />
+                    () => <PassSection
+                        getDiceware={getDiceware}
+                        setDiceware={setDiceware}
+                        goNext={() => renderControlRef.next()}
+                        goPrevious={() => renderControlRef.previous()}
+                    />,
+                    () => <ConfirmationSection />
                 ]}
             />
             <VaultPreview
                 name={getName()}
-                pass={""}
-                passSeparator="" />
+                pass={getDiceware().password}
+                passSeparator={getDiceware().separator}
+            />
         </div>
     )
 }

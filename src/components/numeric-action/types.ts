@@ -7,7 +7,7 @@ export interface NumericActionProps extends Omit<
 > {
     radioProps: NumericRadioProps
     labelText?: string
-    onAction?: (number?: number) => void | Promise<void>
+    onAction?: (number: number) => void | Promise<void>
     onClickInfo?: () => void | Promise<void>
     svgComponent: () => JSX.Element
     animationMode?: "dice"

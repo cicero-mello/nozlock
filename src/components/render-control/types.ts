@@ -10,5 +10,5 @@ export interface RenderControlProps extends Omit<
     JSX.HTMLAttributes<HTMLDivElement>,
     "class" | "ref"> {
     ref: (ref: RenderControlRef) => void
-    elements: JSX.Element[]
+    elements: (() => JSX.Element)[]
 }

@@ -1,11 +1,14 @@
-import { type Component } from "solid-js"
+import { createMemo, type Component } from "solid-js"
 import style from "./styles.module.css"
 import type { VaultPreviewProps } from "./types"
 import { VaultSVG } from "@components/svg"
 
 export const VaultPreview: Component<VaultPreviewProps> = (props) => {
-    const escapedSeparator = props.passSeparator.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-    const regex = new RegExp(`(${escapedSeparator})`, "g")
+    const pass = createMemo(() => {
+        const escapedSeparator = props.passSeparator.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+        const regex = new RegExp(`(${escapedSeparator})`, "g")
+        return props.pass.split(regex)
+    })
 
     return (
         <div class={style.wrapper}>
@@ -14,9 +17,9 @@ export const VaultPreview: Component<VaultPreviewProps> = (props) => {
                     <p>{props.name}</p>
                 )}
                 {props.pass && (
-                    <p>{props.pass.split(regex).map((value, index) => {
+                    <p>{pass().map((value, index) => {
                         if (index % 2 === 0) return <>{value}</>
-                        return <span class={style.foda}>{value}</span>
+                        return <span class={style.separator}>{value}<wbr /></span>
                     })}</p>
                 )}
             </div>

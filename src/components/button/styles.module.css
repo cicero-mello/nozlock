@@ -41,14 +41,14 @@
 
 .soft {
     color: var(--cotton-50);
-    font-size: 1.125rem;
+    font-size: 1rem;
 
     &::before {
         content: "";
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 2px;
+        height: 1px;
         background-color: var(--cotton-50);
         transition: background-color 60ms linear;
         border-radius: 1rem;

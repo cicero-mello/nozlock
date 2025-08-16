@@ -8,6 +8,8 @@
     border-right: 2px solid var(--color-milk-4);
     position: sticky;
     top: 0;
+
+    user-select: none;
 }
 
 .header {
