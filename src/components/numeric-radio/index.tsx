@@ -10,7 +10,7 @@ export const NumericRadio: Component<NumericRadioProps> = (props) => {
 
     const id = createUniqueId()
     const inputRefs: HTMLInputElement[] = []
-    const [getCurrentValue, setCurrentValue] = createSignal(props.defaultChecked ?? 0)
+    const [getCurrentValue, setCurrentValue] = createSignal(props.defaultChecked ?? props.minValue)
 
     const inputQuantityList = Array.from(
         { length: props.maxValue - props.minValue + 1 }
@@ -89,6 +89,13 @@ export const NumericRadio: Component<NumericRadioProps> = (props) => {
         currentInput?.focus()
     }
 
+
+    if (props.ref) {
+        props.ref({
+            focus: focusCurrentInput
+        })
+    }
+
     return (
         <div class={style.wrapper + " numeric-radio"}>
             {props.labelText && (
@@ -98,7 +105,7 @@ export const NumericRadio: Component<NumericRadioProps> = (props) => {
                     children={props.labelText}
                 />
             )}
-            <div class={style.commands} on:click={focusCurrentInput}>
+            <div class={style.commands + " commands"} on:click={focusCurrentInput}>
                 <button
                     aria-hidden="true"
                     type="button"

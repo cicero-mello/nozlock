@@ -1,3 +1,7 @@
+export interface NumericRadioRef {
+    focus: () => void
+}
+
 export interface NumericRadioProps {
     maxValue: number
     minValue: number
@@ -6,4 +10,5 @@ export interface NumericRadioProps {
     onChange?: (inputValue: number) => void | Promise<void>
     startWithFocus?: boolean
     labelText?: string
+    ref?: (ref: NumericRadioRef) => void
 }

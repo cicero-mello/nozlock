@@ -65,15 +65,16 @@ kanban-plugin: board
 ## A Fazer
 
 - [ ] [12] #front-end  Criar Seção Criação Cofre Etapa 3
-- [ ] [11] #front-end  Criar Seção Criação Cofre Etapa 2
 
 
 ## Fazendo
 
+- [ ] [11] #front-end  Criar Seção Criação Cofre Etapa 2
 
 
 ## Feito
 
+- [ ] [70] #front-end Criar Numeric Action Component
 - [ ] [1] #front-end Criar Componente Cofre Preview @{2025-08-05}
 - [ ] [3] #front-end Criar Seção Criação Cofre Etapa 1
 - [ ] [69] #front-end Criar Modal @{2025-08-05}

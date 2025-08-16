@@ -65,7 +65,6 @@ export const NameSection: Component<NameSectionProps> = (props) => {
                     <Button on:click={handleNext}>
                         Next
                     </Button>
-
                 </div>
             </section>
             <SoftModal.Base ref={(element) => modalRef = element}>
