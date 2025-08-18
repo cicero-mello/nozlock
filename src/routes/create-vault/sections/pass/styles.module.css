@@ -42,7 +42,7 @@
     color: var(--color-milk-4);
 }
 
-.modal-ul {
+.modal-list {
     display: flex;
     flex-direction: column;
     gap: 0.375rem;

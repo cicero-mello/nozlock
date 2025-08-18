@@ -45,11 +45,11 @@ export const PassSection: Component<PassSectionProps> = (props) => {
                         animationMode="dice"
                         svgComponent={() => <DiceSVG />}
                         radioProps={{
-                            maxValue: 18,
-                            minValue: 12,
+                            maxValue: 12,
+                            minValue: 9,
                             labelText: "Words",
                             startWithFocus: true,
-                            defaultChecked: 12
+                            defaultChecked: 9
                         }}
                     />
                     <div class={style["text-preview"]}>
@@ -94,13 +94,42 @@ export const PassSection: Component<PassSectionProps> = (props) => {
                 <SoftModal.Text>
                     Here are some methods to help you to memorize them:
                 </SoftModal.Text>
-                <ol class={style["modal-ul"]}>
+                <ol class={style["modal-list"]}>
                     <li><b>Story Method:</b> Make a weird or vivid story linking all words. </li>
                     <li><b>Visualization:</b> Picture each word as a clear, mental image. </li>
                     <li><b>Chunking:</b> Break into smaller groups of 3-4 words.</li>
                     <li><b>Repetition:</b> Write, type, or recite repeatedly over time. </li>
                     <li><b>Acronyms/Mnemonics:</b> Use first letters to form a memorable phrase.</li>
                 </ol>
+                <br /><br />
+                <SoftModal.Title>
+                    How many words should I use?
+                </SoftModal.Title>
+                <SoftModal.Text>
+                    In Traditional Diceware, 11 words is enough against opponents with perfect
+                    quantum machines (something that only exists in an ideal world).
+                </SoftModal.Text>
+                <SoftModal.Text>
+                    However, <b><i>Nozlock's Diceware</i></b> uses an extra die,
+                    boasting a dictionary of 46,656 words instead of 7,776!
+                    Therefore, using 9 words here ends up being equivalent
+                    to the 11 words in traditional Diceware!
+                </SoftModal.Text>
+                <ul class={style["modal-list"]}>
+                    <li>
+                        <b>9 words: </b>
+                        In the extreme theoretical limit, the vault
+                        can be cracked in 8 years.
+                        In a more realistic scenario (still considering Grover's Algorithm),
+                        it would take <b><i>trillions of years</i></b>.
+                    </li>
+                    <li>
+                        <b>10 - 12 words: </b>
+                        Even in the unattainable theoretical limit, the vault
+                        would only be cracked after <b><i>thousands of years</i></b>.
+                    </li>
+                </ul>
+                <br />
                 <SoftModal.Footer>
                     <Button
                         mode="modal-primary"
