@@ -1,7 +1,7 @@
 import { Button, Input, SoftModal, type SoftModalRef } from "@components"
 import type { ConfirmationSectionProps } from "./types"
 import { onMount, type Component } from "solid-js"
-import { useNavigate } from "@solidjs/router"
+import { revalidate, useNavigate } from "@solidjs/router"
 import style from "./styles.module.css"
 import { useToast } from "@context"
 import * as api from "@api"
@@ -35,10 +35,11 @@ export const ConfirmationSection: Component<ConfirmationSectionProps> = (props) 
                 password: props.password,
                 vaultName: props.vaultName
             })
-            navigate("/")
+            revalidate(api.listAllVaults.key)
             setTimeout(() => {
                 toast.show("Vault Created!", { duration: 4500 })
             }, 300)
+            navigate("/")
         } catch (error) {
             toast.show(error + "", { mountOn: sectionRef })
             confirmationModalRef.close()

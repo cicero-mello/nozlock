@@ -57,7 +57,6 @@ kanban-plugin: board
 
 ## A Fazer
 
-- [ ] [7] #front-end  Adaptar Aside p/ Listar os Cofres Criados
 - [ ] [8] #front-end  Criar Tela de Acesso ao Cofre
 - [ ] [9] #front-end  Criar Componente "Card Action"(Password/Notes)
 - [ ] [15] #front-end  Criar Tela de Adição de Senha ao Cofre
@@ -72,6 +71,7 @@ kanban-plugin: board
 
 ## Feito
 
+- [ ] [7] #front-end  Adaptar Aside p/ Listar os Cofres Criados
 - [ ] [12] #front-end  Criar Seção Criação Cofre Etapa 3
 - [ ] [11] #front-end  Criar Seção Criação Cofre Etapa 2
 - [ ] [70] #front-end Criar Numeric Action Component

@@ -1,12 +1,14 @@
 import { GitHubSVG, ImportSVG, LogoSVG, NotesSVG, SettingsSVG, VaultSVG } from "../svg"
 import { getCurrentWindow } from "@tauri-apps/api/window"
-import { useLocation } from "@solidjs/router"
-import { mockVaultNameList } from "./mock"
+import { createAsync, useLocation } from "@solidjs/router"
 import { createMemo, type Component } from "solid-js"
 import style from "./styles.module.css"
 import { A } from "@solidjs/router"
+import * as api from "@api"
 
 export const Aside: Component = () => {
+    const vaultNames = createAsync(() => api.listAllVaults())
+
     const appWindow = getCurrentWindow()
     const location = useLocation()
 
@@ -41,20 +43,22 @@ export const Aside: Component = () => {
                     children={<LogoSVG />}
                 />
             </header>
-            <p class={style['vault-list-indicator']}>Vaults</p>
+            {vaultNames() && vaultNames()!.length > 0 && (
+                <p class={style['vault-list-indicator']}>Vaults</p>
+            )}
             <nav class={style.nav}>
-                {mockVaultNameList.map(({ name, encoded }) => (
+                {vaultNames() && vaultNames()!.map((name) => (
                     <A
-                        href={`vault/${encoded}`}
+                        href={`vault/${name.encoded}`}
                         onClick={(e) => { e.currentTarget.blur() }}
                         classList={{
                             [style["vault-anchor"]]: true,
                             [style["vault-anchor-match-current-page"]]: (
-                                vaultRouteId() === encoded
+                                vaultRouteId() === name.encoded
                             )
                         }}
                     >
-                        <VaultSVG /> <span>{name}</span>
+                        <VaultSVG /> <span>{name.original}</span>
                     </A>
                 ))}
             </nav>
