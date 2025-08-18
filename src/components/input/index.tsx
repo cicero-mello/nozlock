@@ -42,6 +42,7 @@ export const Input: Component<InputProps> = (props) => {
 
             {props.type === "password" && (
                 <button
+                    type="button"
                     class={style["eye-button"] + " eye-button"}
                     onClick={() => {
                         setInputType(oldValue => {

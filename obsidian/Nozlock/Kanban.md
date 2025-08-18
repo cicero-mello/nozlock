@@ -24,14 +24,7 @@ kanban-plugin: board
 - [ ] [53] #back-end Criar Função p/ Deletar Senha do Cofre
 - [ ] [23] #back-end Criar Função(es) p/ Listar Senhas do Cofre
 - [ ] [24] #front-end Adaptar Tela do Cofre p/ Listar Valores Salvos
-- [ ] [15] #front-end  Criar Tela de Adição de Senha ao Cofre
-- [ ] [17] #front-end Criar Tela de Adição de Nota
 - [ ] [13] #front-end  Criar Tela Inicial do Cofre
-- [ ] [21] #back-end Criar Função(es) p/ Armazenar Notas ao Cofre
-- [ ] [19] #back-end Criar Função(es) p/ Armazenar Senhas ao Cofre
-- [ ] [9] #front-end  Criar Componente "Card Action"(Password/Notes)
-- [ ] [7] #front-end  Adaptar Aside p/ Listar os Cofres Criados
-- [ ] [8] #front-end  Criar Tela de Acesso ao Cofre
 - [ ] [4] #front-end Usar Fontes CSS Locais
 - [ ] [64] #front-end Integrar comando de criação de vault
 - [ ] [42] #front-end Criar Tela de Settings
@@ -64,7 +57,13 @@ kanban-plugin: board
 
 ## A Fazer
 
-- [ ] [12] #front-end  Criar Seção Criação Cofre Etapa 3
+- [ ] [7] #front-end  Adaptar Aside p/ Listar os Cofres Criados
+- [ ] [8] #front-end  Criar Tela de Acesso ao Cofre
+- [ ] [9] #front-end  Criar Componente "Card Action"(Password/Notes)
+- [ ] [15] #front-end  Criar Tela de Adição de Senha ao Cofre
+- [ ] [17] #front-end Criar Tela de Adição de Nota
+- [ ] [21] #back-end Criar Função(es) p/ Armazenar Notas ao Cofre
+- [ ] [19] #back-end Criar Função(es) p/ Armazenar Senhas ao Cofre
 
 
 ## Fazendo
@@ -73,6 +72,7 @@ kanban-plugin: board
 
 ## Feito
 
+- [ ] [12] #front-end  Criar Seção Criação Cofre Etapa 3
 - [ ] [11] #front-end  Criar Seção Criação Cofre Etapa 2
 - [ ] [70] #front-end Criar Numeric Action Component
 - [ ] [1] #front-end Criar Componente Cofre Preview @{2025-08-05}

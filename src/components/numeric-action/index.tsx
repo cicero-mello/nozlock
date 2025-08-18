@@ -58,6 +58,7 @@ export const NumericAction: Component<NumericActionProps> = (props) => {
             >
                 <button
                     tabIndex={-1}
+                    type="button"
                     ref={(element) => { setButtonRef(element) }}
                     class={style["action-button"]}
                     on:mousedown={(event) => event.preventDefault()}

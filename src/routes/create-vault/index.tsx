@@ -2,9 +2,9 @@ import { type RenderControlRef, RenderControl } from "@components"
 import { createSignal, onMount, type Component } from "solid-js"
 import { ConfirmationSection, NameSection, PassSection } from "./sections"
 import type { DicewareGeneratorResponse } from "@api"
-import style from "./styles.module.css"
-import { useHeaderContext } from "@context"
 import { VaultPreview } from "./vault-preview"
+import { useHeaderContext } from "@context"
+import style from "./styles.module.css"
 
 export const CreateVault: Component = () => {
     const headerContext = useHeaderContext()
@@ -38,7 +38,11 @@ export const CreateVault: Component = () => {
                         goNext={() => renderControlRef.next()}
                         goPrevious={() => renderControlRef.previous()}
                     />,
-                    () => <ConfirmationSection />
+                    () => <ConfirmationSection
+                        goPrevious={() => renderControlRef.previous()}
+                        password={getDiceware().password}
+                        vaultName={getName()}
+                    />
                 ]}
             />
             <VaultPreview

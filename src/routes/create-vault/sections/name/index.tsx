@@ -26,10 +26,14 @@ export const NameSection: Component<NameSectionProps> = (props) => {
             const alreadyExists = await api.vaultAlreadyExists({ vaultName: props.getName() })
             if (alreadyExists) {
                 toast.show("Vault Already Exists", { mountOn: sectionRef })
+                inputRef.focus()
+                inputRef.select()
                 return false
             }
         } catch (error) {
             toast.show(`${error}`, { mountOn: sectionRef })
+            inputRef.focus()
+            inputRef.select()
             return false
         }
 
@@ -43,6 +47,7 @@ export const NameSection: Component<NameSectionProps> = (props) => {
 
     onMount(() => {
         inputRef.focus()
+        inputRef.select()
     })
 
     return (
