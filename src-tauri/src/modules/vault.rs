@@ -2,6 +2,7 @@ use crate::modules::{_aes_gcm, _argon2, file_manipulation, filename};
 use std::io::{Error, ErrorKind};
 use std::path::Path;
 use std::fs;
+use serde::Serialize;
 
 const VAULT_FILES_FOLDER: &str = ".vts/";
 
@@ -102,23 +103,30 @@ pub fn get_content (
     };
 }
 
-pub fn list_all() -> Result<Vec<String>, Error> {
+#[derive(Serialize)]
+pub struct VaultNames {
+    pub original: String,
+    pub encoded: String,
+}
+
+pub fn list_all() -> Result<Vec<VaultNames>, Error> {
     let files = match file_manipulation::list_files(VAULT_FILES_FOLDER) {
         Ok(files) => files,
-        Err(error) => return Err(error)
+        Err(error) => return Err(error),
     };
 
-    let decoded_file_names = files.into_iter().map(
-        |name| filename::decode(&name)
-    ).collect();
-
-    match decoded_file_names {
-        Ok(all_vaults_names) => return Ok(all_vaults_names),
-        Err(error) => return Err(Error::new(
-            ErrorKind::Other,
-            format!("Error on decode:\n{}", error)
-        ))
-    };
+    files.into_iter().map(|name| {
+        match filename::decode(&name) {
+            Ok(decoded) => Ok(VaultNames {
+                original: decoded,
+                encoded: name,
+            }),
+            Err(error) => Err(Error::new(
+                ErrorKind::Other,
+                format!("Error on decode:\n{}", error),
+            ))
+        }
+    }).collect()
 }
 
 pub fn already_exists (vault_name: &str) -> Result<bool, Error> {
@@ -128,7 +136,7 @@ pub fn already_exists (vault_name: &str) -> Result<bool, Error> {
     };
 
     for vault in all_vaults {
-        if vault == vault_name {
+        if vault.original == vault_name {
             return Ok(true)
         }
     }

@@ -39,7 +39,7 @@ fn vault_already_exists(
 }
 
 #[tauri::command]
-fn list_all_vaults() -> Result<Vec<String>, String> {
+fn list_all_vaults() -> Result<Vec<vault::VaultNames>, String> {
     match vault::list_all(){
         Ok(all_vaults_names) => return Ok(all_vaults_names),
         Err(error) => return Err(format!("{}", error))
